@@ -4,6 +4,6 @@
 
 * basic standard 1C-layout
 * 6 types of reports construction
-* rather good optimization of the documents "ПриходнаяНакладная" and "ОказаниеУслуги"
+* rather good optimization of the documents
 * 2 characteristic types
 * small version of the accounting
