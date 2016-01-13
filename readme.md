@@ -1,4 +1,4 @@
-﻿## This is the v.1.1 of this configuration.
+## This is the v.1.1 of this configuration.
 
 ## This configuration has:
 
