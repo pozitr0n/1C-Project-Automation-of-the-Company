@@ -1,7 +1,7 @@
-﻿## This is the v.1.1 of this configuration.
+﻿### This is the v.1.1 of this configuration.
 
 
-## This configuration has:
+### This configuration has:
 
 
 
@@ -20,6 +20,10 @@
 * users-list and their role
 
 * data-changing
+* good and quick searching through database
+Not realize in this version:
+
+* functional options
 
 
 #### Features configuration "1C: Enterprise 8.3": 
