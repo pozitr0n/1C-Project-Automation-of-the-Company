@@ -1,4 +1,4 @@
-﻿### This is the v.1.1 of this configuration.
+﻿### This is the v.2.0 of this configuration.
 
 
 ### This configuration has:
@@ -21,13 +21,11 @@
 
 * data-changing
 * good and quick searching through database
-Not realize in this version:
-
 * functional options
 
-
+### p.s.
 #### Features configuration "1C: Enterprise 8.3": 
-*universal means of printed forms of documents with the ability to send a document via e-mail; 
+* universal means of printed forms of documents with the ability to send a document via e-mail; 
 * versatile batch processing manuals and documents; 
 * connection of external treatments and restricting access to their use; 
 * connection of additional forms printed documents; 
