@@ -32,5 +32,5 @@
 * connection of additional handlers fill tabular parts of documents; 
 * Setting the date the ban change the data; 
 * user administration tools in the "1C: Enterprise"; 
-* means for separating the access to data on employment (roles) of users
+* means for separating the access to data on employment (roles) of users.
 
