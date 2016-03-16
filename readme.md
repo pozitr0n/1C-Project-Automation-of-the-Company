@@ -34,3 +34,6 @@
 * user administration tools in the "1C: Enterprise"; 
 * means for separating the access to data on employment (roles) of users.
 
+##### p.s.
+This configuration includes some proccessing modules for 1C:Enterprise.
+
