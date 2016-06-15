@@ -1,0 +1,315 @@
+﻿{"#",e603c0f2-92fb-4d47-8f38-a44a381cf235,
+{1,
+{3,
+{0,"Отчет",
+{"Pattern",
+{"S",100,1}
+},"Отчет",172},
+{1,"ТекстОписанияОтчета",
+{"Pattern"},"",0},
+{2,"ТекстНастроекОтчета",
+{"Pattern"},"",0}
+},
+{2,3,0,0,1,1,2,2,
+{1,1,
+{2,0,3,
+{"S","Отчеты"},
+{"S",""},
+{"S","<settings xmlns=""http://v8.1c.ru/8.1/data-composition-system/settings"" xmlns:dcscor=""http://v8.1c.ru/8.1/data-composition-system/core"" xmlns:style=""http://v8.1c.ru/8.1/data/ui/style"" xmlns:sys=""http://v8.1c.ru/8.1/data/ui/fonts/system"" xmlns:v8=""http://v8.1c.ru/8.1/data/core"" xmlns:v8ui=""http://v8.1c.ru/8.1/data/ui"" xmlns:web=""http://v8.1c.ru/8.1/data/ui/colors/web"" xmlns:win=""http://v8.1c.ru/8.1/data/ui/colors/windows"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance""/>"},1,
+{1,1,
+{2,1,3,
+{"S","111"},
+{"S","<dataCompositionSchema xmlns=""http://v8.1c.ru/8.1/data-composition-system/schema"" xmlns:dcscom=""http://v8.1c.ru/8.1/data-composition-system/common"" xmlns:dcscor=""http://v8.1c.ru/8.1/data-composition-system/core"" xmlns:dcsset=""http://v8.1c.ru/8.1/data-composition-system/settings"" xmlns:v8=""http://v8.1c.ru/8.1/data/core"" xmlns:v8ui=""http://v8.1c.ru/8.1/data/ui"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type=""DataSetQuery"">
+		<name>НаборДанных1</name>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СчетДт</dataPath>
+			<field>СчетДт</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СубконтоДт2</dataPath>
+			<field>СубконтоДт2</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ВалютаКт</dataPath>
+			<field>ВалютаКт</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СубконтоКт1</dataPath>
+			<field>СубконтоКт1</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+				<dcscom:ignoreNullValues>true</dcscom:ignoreNullValues>
+			</role>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СубконтоКт3</dataPath>
+			<field>СубконтоКт3</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СубконтоДт1</dataPath>
+			<field>СубконтоДт1</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ВалютаДт</dataPath>
+			<field>ВалютаДт</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СубконтоДт3</dataPath>
+			<field>СубконтоДт3</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СубконтоКт2</dataPath>
+			<field>СубконтоКт2</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СчетКт</dataPath>
+			<field>СчетКт</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СуммаОборот</dataPath>
+			<field>СуммаОборот</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ХозрасчетныйОборотыДтКт.Организация,
+	ХозрасчетныйОборотыДтКт.СчетДт,
+	ХозрасчетныйОборотыДтКт.СчетКт,
+	ХозрасчетныйОборотыДтКт.СубконтоКт1,
+	ХозрасчетныйОборотыДтКт.СуммаОборот
+ИЗ
+	РегистрБухгалтерии.Хозрасчетный.ОборотыДтКт(&amp;НачалоПериода, &amp;КонецПериода, Авто, , , СчетКт = &amp;СчетАммортизации, &amp;ВидСубконто, ) КАК ХозрасчетныйОборотыДтКт</query>
+	</dataSet>
+	<totalField>
+		<dataPath>СуммаОборот</dataPath>
+		<expression>Сумма(СуммаОборот)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type=""v8:LocalStringType"">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type=""xs:dateTime"">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type=""v8:LocalStringType"">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type=""xs:dateTime"">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>СчетАммортизации</name>
+		<title xsi:type=""v8:LocalStringType"">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет аммортизации</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1=""http://v8.1c.ru/8.1/data/enterprise/current-config"">d4p1:ChartOfAccountsRef.Хозрасчетный</v8:Type>
+		</valueType>
+		<value xsi:type=""dcscor:DesignTimeValue"">ПланСчетов.Хозрасчетный.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидСубконто</name>
+		<title xsi:type=""v8:LocalStringType"">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид субконто</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1=""http://v8.1c.ru/8.1/data/enterprise/current-config"">d4p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные</v8:Type>
+		</valueType>
+		<value xsi:type=""dcscor:DesignTimeValue"">ПланВидовХарактеристик.ВидыСубконтоХозрасчетные.ОсновныеСредства</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type=""xs:string"">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style=""http://v8.1c.ru/8.1/data/ui/style"" xmlns:sys=""http://v8.1c.ru/8.1/data/ui/fonts/system"" xmlns:web=""http://v8.1c.ru/8.1/data/ui/colors/web"" xmlns:win=""http://v8.1c.ru/8.1/data/ui/colors/windows"">
+			<dcsset:selection>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>СчетДт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>СчетКт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>СубконтоКт1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>СуммаОборот</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type=""dcsset:SettingsParameterValue"">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type=""dcsset:SettingsParameterValue"">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type=""dcsset:SettingsParameterValue"">
+					<dcscor:parameter>СчетАммортизации</dcscor:parameter>
+					<dcscor:value xmlns:d6p1=""http://v8.1c.ru/8.1/data/enterprise/current-config"" xsi:type=""d6p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные"">00000000-0000-0000-0000-000000000000</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type=""dcsset:OrderItemField"">
+					<dcsset:field>Организация</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:item xsi:type=""dcsset:StructureItemGroup"">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type=""dcsset:GroupItemField"">
+						<dcsset:field>Организация</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:GroupItemField"">
+						<dcsset:field>СубконтоКт1</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:GroupItemField"">
+						<dcsset:field>СчетДт</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:GroupItemField"">
+						<dcsset:field>СчетКт</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type=""dcsset:GroupItemField"">
+						<dcsset:field>СуммаОборот</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type=""xs:dateTime"">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type=""dcsset:OrderItemAuto""/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type=""dcsset:SelectedItemAuto""/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</dataCompositionSchema>"},
+{"S","<settings xmlns=""http://v8.1c.ru/8.1/data-composition-system/settings"" xmlns:dcscor=""http://v8.1c.ru/8.1/data-composition-system/core"" xmlns:style=""http://v8.1c.ru/8.1/data/ui/style"" xmlns:sys=""http://v8.1c.ru/8.1/data/ui/fonts/system"" xmlns:v8=""http://v8.1c.ru/8.1/data/core"" xmlns:v8ui=""http://v8.1c.ru/8.1/data/ui"" xmlns:web=""http://v8.1c.ru/8.1/data/ui/colors/web"" xmlns:win=""http://v8.1c.ru/8.1/data/ui/colors/windows"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+	<selection>
+		<item xsi:type=""SelectedItemField"">
+			<field>Организация</field>
+		</item>
+		<item xsi:type=""SelectedItemField"">
+			<field>СубконтоКт1</field>
+		</item>
+		<item xsi:type=""SelectedItemField"">
+			<field>СчетДт</field>
+		</item>
+		<item xsi:type=""SelectedItemField"">
+			<field>СчетКт</field>
+		</item>
+		<item xsi:type=""SelectedItemField"">
+			<field>СуммаОборот</field>
+		</item>
+	</selection>
+	<dataParameters>
+		<dcscor:item xsi:type=""SettingsParameterValue"">
+			<dcscor:parameter>НачалоПериода</dcscor:parameter>
+			<dcscor:value xsi:type=""v8:StandardBeginningDate"">
+				<v8:variant xsi:type=""v8:StandardBeginningDateVariant"">Custom</v8:variant>
+				<v8:date>0001-01-01T00:00:00</v8:date>
+			</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type=""SettingsParameterValue"">
+			<dcscor:parameter>КонецПериода</dcscor:parameter>
+			<dcscor:value xsi:type=""v8:StandardBeginningDate"">
+				<v8:variant xsi:type=""v8:StandardBeginningDateVariant"">Custom</v8:variant>
+				<v8:date>0001-01-01T00:00:00</v8:date>
+			</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type=""SettingsParameterValue"">
+			<dcscor:parameter>СчетАммортизации</dcscor:parameter>
+			<dcscor:value xmlns:d4p1=""http://v8.1c.ru/8.1/data/enterprise/current-config"" xsi:type=""d4p1:ChartOfAccountsRef.Хозрасчетный"">4705592d-856c-11e1-a1d2-08002700dc41</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type=""SettingsParameterValue"">
+			<dcscor:parameter>ВидСубконто</dcscor:parameter>
+			<dcscor:value xmlns:d4p1=""http://v8.1c.ru/8.1/data/enterprise/current-config"" xsi:type=""d4p1:ChartOfCharacteristicTypesRef.ВидыСубконтоХозрасчетные"">23114858-dd43-4912-aa6c-cf52cfa4b660</dcscor:value>
+		</dcscor:item>
+	</dataParameters>
+	<item xsi:type=""StructureItemTable"">
+		<row>
+			<order>
+				<item xsi:type=""OrderItemAuto""/>
+			</order>
+			<selection>
+				<item xsi:type=""SelectedItemAuto""/>
+			</selection>
+		</row>
+		<selection>
+			<item xsi:type=""SelectedItemAuto""/>
+		</selection>
+	</item>
+</settings>"},0}
+}
+}
+},2,1}
+}
+}
